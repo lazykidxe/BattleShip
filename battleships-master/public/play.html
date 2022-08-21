@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Battle Ships</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
     <script>
       let gameMode = 'singlePlayer'
     </script>
     <script src="app.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body id="playBody">
     <div class="container">
       <div class="battleship-grid grid-user"></div>
       <div class="battleship-grid grid-computer"></div>
@@ -22,7 +22,7 @@
         <button id="rotate" class="btn">Rotate Your Ships</button>
       </div>
       <h3 id="whose-go" class="info-text">Your Go</h3>
-      <h3 id="info" class="info-text"></h3>
+      <h3 id="info" class="info-text">Ship Info here?</h3>
     </div>
 
     <div class="container">

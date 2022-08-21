@@ -4,6 +4,23 @@ body {
   overflow-x: hidden;
 }
 
+#indexBody {
+  background-image: url("https://images.alphacoders.com/798/thumb-1920-798300.jpg");
+}
+#info {
+  color:#F3F3F3;
+}
+
+
+#playBody {
+  background-image: url("../images/playbackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#whose-go {
+  color: #F3F3F3;
+}
+
 *, *::before, *::after {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
@@ -20,6 +37,7 @@ body {
 .splash-title {
   font-family: 'Bangers', cursive;
   font-size: 10rem;
+  color: #F3F3F3;
 }
 
 .splash-battleship-image {
@@ -177,6 +195,8 @@ body {
 }
 
 .destroyer-container {
+  background-image: url("../images/destroyership1.jpg");
+  background-size: contain;
   --width: 2;
 }
 
@@ -185,8 +205,16 @@ body {
   --width: 1;
 }
 
-.submarine-container,
+.submarine-container {
+  background-image: url("../images/submarine1.jpg");
+  background-size:cover;
+  background-position-y:45%;
+  --width: 3;
+}
 .cruiser-container {
+  background-image: url("../images/cruiser1.jpg");
+  background-size:cover;
+  background-position-y:45%;
   --width: 3;
 }
 
@@ -197,6 +225,9 @@ body {
 }
 
 .battleship-container {
+  background-image: url("../images/battleship1.jpg");
+  background-size:cover;
+  background-position-y:50%;
   --width: 4;
 }
 
@@ -206,6 +237,9 @@ body {
 }
 
 .carrier-container {
+  background-image: url("../images/carriership1.jpg");
+  background-size:cover;
+  background-position-y:45%;
   --width: 5;
 }
 
