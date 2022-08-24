@@ -110,9 +110,77 @@ body {
 .taken,
 .ship {
   position: relative;
-  background-color: hsl(0, 0%, 80%);
+
 }
 
+.taken.start.horizontal.battleship,.taken.end.horizontal.battlship,.taken.end.horizontal.battleship::before,
+.taken.undefined.horizontal.battleship,.taken.undefined.horizontal.battleship::before
+,.taken.end.horizontal.battleship::before{
+  background-image: url("images/battleship1.jpg");
+  background-size: cover;
+}
+.taken.start.vertical.battleship,.taken.end.vertical.battlship,.taken.end.vertical.battleship::before,
+.taken.undefined.vertical.battleship,.taken.undefined.vertical.battleship::before
+,.taken.end.vertical.battleship::before{
+  background-image: url("images/battleship2.jpg");
+  background-size: cover;
+}
+
+
+.taken.start.horizontal.carrier,.taken.end.horizontal.carrier,.taken.end.horizontal.carrier::before,
+.taken.undefined.horizontal.carrier,.taken.undefined.horizontal.carrier::before
+,.taken.end.horizontal.carrier::before{
+  background-image: url("images/carriership1.jpg");
+  background-size: cover;
+}
+.taken.start.vertical.carrier,.taken.end.vertical.carrier,.taken.end.vertical.carrier::before,
+.taken.undefined.vertical.carrier,.taken.undefined.vertical.carrier::before
+,.taken.end.vertical.carrier::before{
+  background-image: url("images/carriership2.jpg");
+  background-size: cover;
+}
+
+.taken.start.horizontal.cruiser,.taken.end.horizontal.cruiser,.taken.end.horizontal.cruiser::before,
+.taken.undefined.horizontal.cruiser,.taken.undefined.horizontal.cruiser::before
+,.taken.end.horizontal.cruiser::before{
+  background-image: url("images/cruiser1.jpg");
+  background-size: cover;
+}
+.taken.start.vertical.cruiser,.taken.end.vertical.cruiser,.taken.end.vertical.cruiser::before,
+.taken.undefined.vertical.cruiser,.taken.undefined.vertical.cruiser::before
+,.taken.end.vertical.cruiser::before{
+  background-image: url("images/cruiser2.jpg");
+  background-size: cover;
+}
+
+.taken.start.horizontal.destroyer,.taken.end.horizontal.destroyer,.taken.end.horizontal.destroyer::before,
+.taken.undefined.horizontal.destroyer,.taken.undefined.horizontal.destroyer::before
+,.taken.end.horizontal.destroyer::before{
+  background-image: url("images/destroyership1.jpg");
+  background-size: cover;
+}
+.taken.start.vertical.destroyer,.taken.end.vertical.destroyer,.taken.end.vertical.destroyer::before,
+.taken.undefined.vertical.destroyer,.taken.undefined.vertical.destroyer::before
+,.taken.end.vertical.destroyer::before{
+  background-image: url("images/destroyership2.jpg");
+  background-size: cover;
+}
+
+.taken.start.horizontal.submarine,.taken.end.horizontal.submarine,.taken.end.horizontal.submarine::before,
+.taken.undefined.horizontal.submarine,.taken.undefined.horizontal.submarine::before
+,.taken.end.horizontal.submarine::before{
+  background-image: url("images/submarine1.jpg");
+  background-size: cover;
+  background-position-x: 45%;
+}
+.taken.start.vertical.submarine,.taken.end.vertical.submarine,.taken.end.vertical.submarine::before,
+.taken.undefined.vertical.submarine,.taken.undefined.vertical.submarine::before
+,.taken.end.vertical.submarine::before{
+  background-image: url("images/submarine2.jpg");
+  background-size: cover;
+  background-position-y: 45%;
+
+}
 
 .taken.start.vertical,
 .taken.start.vertical::before {
@@ -140,7 +208,7 @@ body {
 
 .taken.vertical::before,
 .taken.horizontal::before {
-  background-image: url("images/battleship1.jpg");
+
   color: red;
   content: '';
   position: absolute;
