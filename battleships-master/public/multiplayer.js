@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const turnDisplay = document.querySelector('#whose-go')
   const infoDisplay = document.querySelector('#info')
 
-  let currentPlayer = 'user'
+  let currentPlayer = 'player1'
   let shotFired = -1
-  let gameMode = 'singlePlayer'
+  let gameMode = 'multiPlayer'
 
   const homeButton = document.getElementById('home');
   const announcement = document.getElementById('announcement')
@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
   turnDisplay.innerHTML = "";
   createBoard(userGrid, userSquares)
   createBoard(computerGrid, computerSquares)
-
-
 
   function createBoard(grid, squares) {
     for (let i = 0; i < width*width; i++) {
