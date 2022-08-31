@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoDisplay = document.querySelector('#info')
   const singlePlayerButton = document.querySelector('#singlePlayerButton')
   const multiPlayerButton = document.querySelector('#multiPlayerButton')
+  
   const userSquares = []
   const computerSquares = []
   let isHorizontal = true
@@ -32,8 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
    // Select Player Mode
    singlePlayerButton.addEventListener('click', startSinglePlayer)
    multiPlayerButton.addEventListener('click', startMultiPlayer)
+   multiPlayerButton.addEventListener("click", startMusic)
+
+var audio = new Audio("Miss.mp3");
+var aduio2 = new Audio("Hit.mp3")
+var music = new Audio("OceanSound.mp3")
+var video = document.getElementById("myVideo");
+
+video.pause();
+document.getElementById("screen").style.visibility = "hidden";
+document.getElementById("multiPlayerButton").style.visibility = "visible";
 
 
+
+function startMusic() {
+  document.getElementById("screen").style.visibility = "visible";
+  video.play();
+  music.play();
+}
 
 
   // Single Player
@@ -403,11 +420,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (gameMode === 'singlePlayer') square = Math.floor(Math.random() * userSquares.length)
     if (!userSquares[square].classList.contains('boom')) {
       userSquares[square].classList.add('boom')
-      if (userSquares[square].classList.contains('destroyer')) cpuDestroyerCount++
-      if (userSquares[square].classList.contains('submarine')) cpuSubmarineCount++
-      if (userSquares[square].classList.contains('cruiser')) cpuCruiserCount++
-      if (userSquares[square].classList.contains('battleship')) cpuBattleshipCount++
-      if (userSquares[square].classList.contains('carrier')) cpuCarrierCount++
+      if (userSquares[square].classList.contains('destroyer')){
+        cpuDestroyerCount++ 
+        aduio2.play()
+      } 
+      if (userSquares[square].classList.contains('submarine')){
+        cpuSubmarineCount++
+      aduio2.play()
+      } 
+      if (userSquares[square].classList.contains('cruiser')){
+        cpuCruiserCount++
+        aduio2.play()
+      } 
+      if (userSquares[square].classList.contains('battleship')){
+        cpuBattleshipCount++
+      aduio2.play()
+      } 
+      if (userSquares[square].classList.contains('carrier')){
+        cpuBattleshipCount++
+        aduio2.play()
+      }else{
+        audio.play();
+      }
+
       checkForWins()
     } else if (gameMode === 'singlePlayer') enemyGo()
     currentPlayer = 'user'
